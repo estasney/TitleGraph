@@ -4,7 +4,7 @@ import string
 
 import pkg_resources
 
-from gensim.models.fasttext import FastText
+from gensim.models import KeyedVectors
 import numpy as np
 
 
@@ -61,8 +61,8 @@ class TitleGraph(object):
 
     def _load_model(self):
 
-        data_path = pkg_resources.resource_filename('title_graph', 'data/title_model.model')
-        return FastText.load(data_path)
+        data_path = pkg_resources.resource_filename('title_graph', 'data/title_model.kv')
+        return KeyedVectors.load(data_path, mmap='r')
 
     def query_forward(self, title, min_weight=2, topn=25):
 

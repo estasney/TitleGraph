@@ -18,11 +18,11 @@ URL = 'https://github.com/estasney/TitleGraph'
 EMAIL = '16440579+estasney@users.noreply.github.com'
 AUTHOR = 'Eric Stasney'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '0.0.1'
+VERSION = '0.0.2'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
-    'networkx', 'flashtext', 'gensim'
+    'networkx', 'flashtext', 'gensim', 'numpy'
 ]
 
 # What packages are optional?
@@ -102,7 +102,7 @@ setup(
     include_package_data=True,
     data_files=[('data', ['title_graph/data/graph.pkl',
                           'title_graph/data/kp.pkl',
-                          'title_graph/data/title_model.model',
+                          'title_graph/data/title_model.kv',
                           'title_graph/data/gram_counts.pkl'])],
     license='MIT',
     classifiers=[
